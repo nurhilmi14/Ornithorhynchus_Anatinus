@@ -5,4 +5,6 @@ comment1.params=Dunia
 comment1.target=void\ addedToWorld(greenfoot.World)
 comment2.params=
 comment2.target=void\ act()
-numComments=3
+comment3.params=statBar\ changer\ color
+comment3.target=Beruang(StatBar,\ int,\ greenfoot.Color)
+numComments=4

@@ -1,13 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.Arrays;
 /**
  * Write a description of class Beruang here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Beruang extends Actor
+public class Beruang extends Pesawat
 {
+    private StatBar statBar;
+    private int changer;
     /**
      * Act - do whatever the Beruang wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,8 +24,7 @@ public class Beruang extends Actor
     
     public void act() 
     {
-        if (timer >0) timer--;
-        
+        if (timer>0) timer--;
         if(Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(),getY()-1);
@@ -49,5 +50,23 @@ public class Beruang extends Actor
         {
             pelor.addObject(new Peluru(), getX(),getY());
         }
+        
+        Actor buaya = getOneIntersectingObject(Buaya.class);
+        if(buaya!=null)
+        {
+            statBar.add(changer);
+        }
+        
+        Actor ular = getOneIntersectingObject(Ular.class);
+        if(ular!=null)
+        {
+            statBar.add(changer);
+        }
+    }
+    
+    public Beruang(StatBar statBar, int changer, Color color)
+    {
+        this.statBar = statBar;
+        this.changer = changer;
     }
 }

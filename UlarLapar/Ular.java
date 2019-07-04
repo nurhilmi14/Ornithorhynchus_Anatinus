@@ -6,8 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ular extends Actor
+public class Ular extends Musuh
 {
+    
     /**
      * Act - do whatever the Ular wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,22 +21,9 @@ public class Ular extends Actor
         setLocation(getX()-1,getY());
         if(getX()==1)
         {
-            setLocation(350,getY());
+            setLocation(299,getY());
         }
-        Actor beruang = getOneIntersectingObject(Beruang.class);
-        Actor unta = getOneIntersectingObject(Unta.class);
-            if(beruang!=null)
-        {
-            getWorld().removeObject(beruang);
-            getWorld().addObject(new Kalah(), 149, 88);
-            Greenfoot.stop();
-        }
-        if(unta!=null)
-        {
-            getWorld().removeObject(unta);
-            getWorld().addObject(new Kalah2(), 149, 88);
-            Greenfoot.stop();
-        }
+        
         Actor peluru = getOneIntersectingObject(Peluru.class);
         if(peluru!=null)
         {

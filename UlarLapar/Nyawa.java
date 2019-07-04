@@ -8,17 +8,17 @@ import greenfoot.Color;
  */
 public class Nyawa extends Actor
 {
-    int nyawa = 4;
-    int nyawaWidth = 80;
-    int nyawaHeight = 15;
-    int pixelsPerNyawaPoint = (int)nyawaWidth/nyawa;
+    int nyawa1 = 4;
+    int nyawa1Width = 80;
+    int nyawa1Height = 15;
+    int pixelsPerNyawa1Point = (int)nyawa1Width/nyawa1;
     /**
      * Act - do whatever the Nyawa wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Nyawa()
     {
-    update();
+        update();
     }
     
     public void act() 
@@ -29,16 +29,16 @@ public class Nyawa extends Actor
     
     public void update()
     {
-        setImage(new GreenfootImage(nyawaWidth + 2, nyawaHeight + 2));
+        setImage(new GreenfootImage(nyawa1Width + 2, nyawa1Height + 2));
         GreenfootImage myImage = getImage();
         myImage.setColor(Color.BLACK);
-        myImage.drawRect(0, 0, nyawaWidth + 1, nyawaHeight + 1);
+        myImage.drawRect(0, 0, nyawa1Width + 1, nyawa1Height + 1);
         myImage.setColor(Color.RED);
-        myImage.fillRect(1, 1, nyawa*pixelsPerNyawaPoint, nyawaHeight);
+        myImage.fillRect(1, 1, nyawa1*pixelsPerNyawa1Point, nyawa1Height);
     }
     
-    public void loseNyawa2()
+    public void loseNyawa1()
     {
-        nyawa--;
+        nyawa1--;
     }
 }

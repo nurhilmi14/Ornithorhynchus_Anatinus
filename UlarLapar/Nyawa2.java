@@ -18,7 +18,7 @@ public class Nyawa2 extends Actor
      */
     public Nyawa2()
     {
-    update();
+        update();
     }
     
     public void act() 

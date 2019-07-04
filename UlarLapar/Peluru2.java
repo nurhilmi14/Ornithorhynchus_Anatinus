@@ -18,10 +18,10 @@ public class Peluru2 extends Actor
         {
             removeTouching(Buaya.class);
         }
-        setLocation(getX()-2,getY());
-        if(getX()==0)
+        setLocation(getX()+2,getY());
+        if(getX()==299)
         {
-            setLocation(0,getY());
+            setLocation(299,getY());
             getWorld().removeObject(this);
             return;
         }

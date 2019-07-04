@@ -12,12 +12,15 @@ public class Ular extends Actor
      * Act - do whatever the Ular wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+      public Ular(){
+    getImage().scale(getImage().getWidth()*6/8,getImage().getHeight()*3/4);
+    }
     public void act() 
     {
-        setLocation(getX()+1,getY());
-        if(getX()==299)
+        setLocation(getX()-1,getY());
+        if(getX()==1)
         {
-            setLocation(0,getY());
+            setLocation(299,getY());
         }
         Actor beruang = getOneIntersectingObject(Beruang.class);
         Actor unta = getOneIntersectingObject(Unta.class);

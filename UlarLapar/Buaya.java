@@ -12,12 +12,15 @@ public class Buaya extends Actor
      * Act - do whatever the Buaya wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+      public Buaya(){
+    getImage().scale(getImage().getWidth()*3/4,getImage().getHeight()*9/12);
+    }
     public void act() 
     {
-        setLocation(getX()+1,getY());
-        if(getX()==299)
+        setLocation(getX()-1,getY());
+        if(getX()==1)
         {
-            setLocation(0,getY());
+            setLocation(299,getY());
         }
         Actor beruang = getOneIntersectingObject(Beruang.class);
         Actor unta = getOneIntersectingObject(Unta.class);

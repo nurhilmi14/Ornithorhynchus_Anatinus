@@ -11,7 +11,11 @@ public class Unta extends Actor
     /**
      * Act - do whatever the Unta wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     *
      */
+       public Unta(){
+    getImage().scale(getImage().getWidth()*2,getImage().getHeight()*2);
+    }
     private MyWorld pelor;
     
     public void addedToWorld(World Dunia)

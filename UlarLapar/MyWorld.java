@@ -18,15 +18,15 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(300, 175, 5);
+        super(300, 175,3 );
         
         prepare();
-        TampilBeruang(1);
-        TampilUnta(0);
+        TampilBeruang(0);
+        TampilUnta(1);
         TampilUlar(5);
         TampilBuaya(5);
-        addObject(new Nilai(),275,20);
-        addObject(new Nilai2(),275,40);
+        addObject(new Nilai(),260,20);
+        addObject(new Nilai2(),260,40);
         skor=0;
         skor2=0;
     }
@@ -43,11 +43,14 @@ public class MyWorld extends World
         addObject(buaya,91,59);
         Ular ular = new Ular();
         addObject(ular,118,41);
+        Unta unta = new Unta();
+        addObject(unta,42,28);
         buaya.setLocation(79,74);
         ular.setLocation(123,52);
         removeObject(ular);
         removeObject(buaya);
         removeObject(beruang);
+        removeObject(unta);
         
     }
     
@@ -55,7 +58,7 @@ public class MyWorld extends World
     {
         for (int i=0; i<banyak; i++)
         {
-            int x = Greenfoot.getRandomNumber(getWidth());
+            int x = Greenfoot.getRandomNumber (200);
             int y = Greenfoot.getRandomNumber(getHeight());
             addObject(new Ular(), x,y);
         }
@@ -65,7 +68,7 @@ public class MyWorld extends World
     {
         for (int i=0; i<banyak; i++)
         {
-            int x = Greenfoot.getRandomNumber(getWidth());
+            int x =  Greenfoot.getRandomNumber (200);
             int y = Greenfoot.getRandomNumber(getHeight());
             addObject(new Buaya(), x,y);
         }
@@ -85,7 +88,7 @@ public class MyWorld extends World
     {
         for (int i=0; i<banyak; i++)
         {
-            int x = Greenfoot.getRandomNumber(getWidth());
+            int x = 20;
             int y = Greenfoot.getRandomNumber(getHeight());
             addObject(new Unta(), x,y);
         }

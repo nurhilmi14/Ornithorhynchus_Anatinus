@@ -58,7 +58,7 @@ public class MyWorld extends World
     {
         for (int i=0; i<banyak; i++)
         {
-            int x = Greenfoot.getRandomNumber (200);
+            int x = Greenfoot.getRandomNumber(getWidth());
             int y = Greenfoot.getRandomNumber(getHeight());
             addObject(new Ular(), x,y);
         }
@@ -68,7 +68,7 @@ public class MyWorld extends World
     {
         for (int i=0; i<banyak; i++)
         {
-            int x =  Greenfoot.getRandomNumber (200);
+            int x = Greenfoot.getRandomNumber(getWidth());
             int y = Greenfoot.getRandomNumber(getHeight());
             addObject(new Buaya(), x,y);
         }
@@ -76,7 +76,7 @@ public class MyWorld extends World
     
     public void TampilBeruang(int banyak)
     {
-        for (int i=0; i<banyak; i++)
+        for (int i=200; i<banyak; i++)
         {
             int x = Greenfoot.getRandomNumber(getWidth());
             int y = Greenfoot.getRandomNumber(getHeight());

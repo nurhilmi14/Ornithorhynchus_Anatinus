@@ -14,6 +14,6 @@ public class Nilai2 extends Actor
      */
     public void act() 
     {
-        setImage(new GreenfootImage("Skor Unta : " + MyWorld.skor2, 30, Color.BLACK, Color.YELLOW));
+        setImage(new GreenfootImage("Player 2 : " + MyWorld.skor2, 30, Color.BLACK, Color.YELLOW));
     }    
 }

@@ -1,10 +1,10 @@
 #Greenfoot project file
 class.Beruang.image=Ship6.png
 class.Buaya.image=Ship2.png
-class.Kalah.image=beruangkalah.png
-class.Kalah2.image=untakalah.png
-class.Menang.image=beruangmenang.png
-class.Menang2.image=untamenang.png
+class.Kalah.image=Header1.png
+class.Kalah2.image=Header1.png
+class.Menang.image=Header.png
+class.Menang2.image=Header.png
 class.MyWorld.image=background.png
 class.Nilai.image=yellow-draught-king.png
 class.Nilai2.image=yellow-draught-king.png
@@ -110,8 +110,8 @@ dependency9.to=Beruang
 dependency9.type=UsesDependency
 editor.fx.0.height=747
 editor.fx.0.width=818
-editor.fx.0.x=281
-editor.fx.0.y=60
+editor.fx.0.x=536
+editor.fx.0.y=33
 height=744
 package.numDependencies=32
 package.numTargets=16

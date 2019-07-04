@@ -13,6 +13,7 @@ public class Beruang extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private MyWorld pelor;
+    private int timer;
     
     public void addedToWorld(World Dunia)
     {
@@ -21,11 +22,8 @@ public class Beruang extends Actor
     
     public void act() 
     {
-        if(Greenfoot.mouseMoved(null))
-        {
-            MouseInfo mouse = Greenfoot.getMouseInfo();
-            setLocation(mouse.getX(), mouse.getY());
-        }
+        if (timer >0) timer--;
+        
         if(Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(),getY()-1);
@@ -42,8 +40,9 @@ public class Beruang extends Actor
         {
             setLocation(getX(),getY()+1);
         }
-        if(Greenfoot.isKeyDown("v"))
+        if(timer == 0 && Greenfoot.isKeyDown("v"))
         {
+            timer = 10;
             pelor.addObject(new Peluru(), getX(),getY());
         }
         if(Greenfoot.mouseClicked(null))

@@ -47,17 +47,17 @@ public class Peluru2 extends Actor
         if(ular!=null)
         {
             getWorld().removeObject(ular);
-            getWorld().addObject(new Ular(), Greenfoot.getRandomNumber(150), Greenfoot.getRandomNumber(175));
+            getWorld().addObject(new Ular(), 300+Greenfoot.getRandomNumber(50), Greenfoot.getRandomNumber(175));
             MyWorld.skor2++;
         }
         Actor buaya = getOneIntersectingObject(Buaya.class);
         if(buaya!=null)
         {
             getWorld().removeObject(buaya);
-            getWorld().addObject(new Buaya(), Greenfoot.getRandomNumber(150), Greenfoot.getRandomNumber(175));
+            getWorld().addObject(new Buaya(), 300+Greenfoot.getRandomNumber(50), Greenfoot.getRandomNumber(175));
             MyWorld.skor2++;
         }
-        if(MyWorld.skor == 100)
+        if(MyWorld.skor2 == 100)
         {
             getWorld().addObject(new Menang2(), 149, 88);
             Greenfoot.stop();

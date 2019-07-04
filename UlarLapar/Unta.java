@@ -17,7 +17,7 @@ public class Unta extends Actor
     getImage().scale(getImage().getWidth()*2,getImage().getHeight()*2);
     }
     private MyWorld pelor;
-    
+    int timer;
     public void addedToWorld(World Dunia)
     {
         pelor = (MyWorld)Dunia;
@@ -43,8 +43,8 @@ public class Unta extends Actor
         }
         if(Greenfoot.isKeyDown("."))
         {
+            timer = 10;
             pelor.addObject(new Peluru2(), getX(),getY());
-            
         }
     }   
 }

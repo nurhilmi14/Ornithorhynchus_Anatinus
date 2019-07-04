@@ -20,7 +20,7 @@ public class Ular extends Actor
         setLocation(getX()-1,getY());
         if(getX()==1)
         {
-            setLocation(299,getY());
+            setLocation(350,getY());
         }
         Actor beruang = getOneIntersectingObject(Beruang.class);
         Actor unta = getOneIntersectingObject(Unta.class);

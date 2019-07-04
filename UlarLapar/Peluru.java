@@ -18,10 +18,10 @@ public class Peluru extends Actor
         {
             removeTouching(Buaya.class);
         }
-        setLocation(getX()-2,getY());
-        if(getX()==0)
+        setLocation(getX()+2,getY());
+        if(getX()==299)
         {
-            setLocation(0,getY());
+            setLocation(299,getY());
             getWorld().removeObject(this);
             return;
         }
@@ -47,14 +47,14 @@ public class Peluru extends Actor
         if(ular!=null)
         {
             getWorld().removeObject(ular);
-            getWorld().addObject(new Ular(), Greenfoot.getRandomNumber(150), Greenfoot.getRandomNumber(175));
+            getWorld().addObject(new Ular(), 300+Greenfoot.getRandomNumber(50), Greenfoot.getRandomNumber(175));
             MyWorld.skor++;
         }
         Actor buaya = getOneIntersectingObject(Buaya.class);
         if(buaya!=null)
         {
             getWorld().removeObject(buaya);
-            getWorld().addObject(new Buaya(), Greenfoot.getRandomNumber(150), Greenfoot.getRandomNumber(175));
+            getWorld().addObject(new Buaya(), 300+Greenfoot.getRandomNumber(50), Greenfoot.getRandomNumber(175));
             MyWorld.skor++;
         }
         if(MyWorld.skor == 100)

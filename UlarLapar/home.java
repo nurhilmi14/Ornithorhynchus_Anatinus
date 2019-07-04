@@ -1,21 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class home here.
+ * Write a description of class Home here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class home extends World
+public class Home extends World
 {
 
     /**
-     * Constructor for objects of class home.
+     * Constructor for objects of class Home.
      * 
      */
-    public home()
+    public Home()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(300, 175,3 ); 
+        
+        addObject(new Start(),150,121);
     }
 }

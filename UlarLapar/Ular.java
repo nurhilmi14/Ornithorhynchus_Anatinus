@@ -12,7 +12,7 @@ public class Ular extends Actor
      * Act - do whatever the Ular wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-      public Ular(){
+    public Ular(){
     getImage().scale(getImage().getWidth()*6/8,getImage().getHeight()*3/4);
     }
     public void act() 
